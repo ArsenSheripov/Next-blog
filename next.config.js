@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+	reactStrictMode: true,
+	swcMinify: true,
+	env: {
+		API_URL: "https://jsonplaceholder.typicode.com",
+	},
+};
 
-module.exports = nextConfig
+module.exports = {
+	env: {
+		API_URL: "https://jsonplaceholder.typicode.com",
+	},
+};

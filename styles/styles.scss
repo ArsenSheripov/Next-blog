@@ -1,26 +1,91 @@
+$darkBlue: #13334c;
+$blue: #005792;
+$lightGray: #f6f6e9;
+$orange: #fd5f00;
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: $lightGray;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: $lightGray;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+		opacity: 0.9;
+	}
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.container {
+	margin: 0 auto;
+	max-width: 70rem;
+	padding: 0 1rem;
+}
+
+.header {
+	padding: 0.5rem 0rem;
+	background-color: $blue;
+	color: $lightGray;
+	font-size: 1.2rem;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	img {
+		border-radius: 1rem;
+	}
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 0;
+	background-color: $orange;
+}
+
+.blogItem {
+	margin-bottom: 1rem;
+	padding: 1rem;
+	background-color: #fff;
+	border-radius: 0.8rem;
+
+	&__title {
+		text-transform: capitalize;
+		font-size: 1.5rem;
+		margin: 0;
+		margin-bottom: 1rem;
+	}
+
+	&__text {
+		text-transform: capitalize;
+		margin: 0;
+		margin-bottom: 1rem;
+	}
+
+	a {
+		display: block;
+		max-width: 7rem;
+		margin-left: auto;
+		background-color: #13334c;
+		padding: 0.8rem 1rem;
+		border-radius: 4px;
+		cursor: pointer;
+	}
 }

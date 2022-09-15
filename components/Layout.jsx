@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
 import React, { Children } from "react";
+import Footer from "./Footer";
+import Header from "./Header";
 
 const Layout = ({ title, description = "", children }) => {
 	return (
@@ -9,14 +10,9 @@ const Layout = ({ title, description = "", children }) => {
 				<title>{title} || Simple Blog on NextJs</title>
 				<meta name="descriprion" content={description} />
 			</Head>
-			<header>
-				<span>LOGO</span>
-				<Link href="/">
-					<a>Glavnaya</a>
-				</Link>
-			</header>
-			<div className="container">{children}</div>
-			<footer>2022 NextJs Blog</footer>
+			<Header />
+			<section className="container">{children}</section>
+			<Footer />
 		</>
 	);
 };
